@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'poppins', sans-serif;
+}
+
+.main_div {
+    height: 100vh;
+    width: 100vw;
+    background-color:rgb(48, 52, 55);
+    display: grid;
+    place-items: center;
+}
+
+.music_container {
+    width: 350px;
+    height: 550px;
+    background-color: rgb( 61, 93,122);
+    border-radius: 20px;
+    box-shadow: 0 12px 30px 5px aqua;
+    padding: 30px;
+    text-align: center;
+}
+
+.music_container #title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    color: #171717;
+    margin: 20px 0 5px 0;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.music_container #artist {
+    color: #cacaca;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: 20px;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.img_container {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 12px 30px 5px rgba(0, 0, 0, 0.4);
+}
+
+.music_controls {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.music_controls i {
+    color: #111111;
+    font-size: 20px;
+    cursor: pointer;
+    filter: drop-shadow(0 12px 30px 5px rgba(0, 0, 0, 0.4));
+}
+
+.music_controls .main_button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #111;
+    color: #f6f6f6;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music_controls i:hover {
+    color: aqua;
+}
+
+.music_controls .fa-play:hover {
+    background-color: #36e2ec;
+    color: #111727;
+}
+
+.anime {
+    animation: rotatePlayer 2s linear infinite;
+    -webkit-animation: rotatePlayer 2s linear infinite;
+}
+
+@keyframes rotatePlayer {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.progressbar_container {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.progress_div {
+    width: 100%;
+    height: 7px;
+    box-shadow:0 0px 0px aqua, 0 0px 2px aqua, 0 0px 2px aqua, 0 0px 2px aqua, 0 0px 2px aqua, 0 0px 2px aqua;
+    border-radius: 50px;
+    position: relative;
+    margin-top: 5px;
+    transition: width 1s linear;
+    cursor: pointer;
+    appearance: none;
+}
+
+.progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color:black;
+    border-radius: 50px;
+    /*  transition: width 2s linear; */
+    cursor: pointer;
+    appearance: none;
+}
+
+.progress_duration_meter {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 600;
+}
